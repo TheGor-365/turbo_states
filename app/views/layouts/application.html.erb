@@ -14,9 +14,11 @@
   </head>
 
   <body>
-    <header>
-      <%= render 'layouts/nav' %>
-    </header>
+      <header>
+        <%= turbo_frame_tag 'nav' do %>
+          <%= render 'layouts/nav' %>
+        <% end %>
+      </header>
 
     <main class="container my-5 pb-5">
       <%= yield %>
